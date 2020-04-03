@@ -1,0 +1,28 @@
+import { LiveCode } from '../../../../libzy'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {FeatureWithThreeColumn} from './three-col/column.js' 
+import {TwoByTwoGrid} from './two-by-two/two.js' 
+const func1 = 
+`<FeatureWithThreeColumn 
+  subtitle="transactions" 
+  title="Find the best properties in your area" 
+  description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+/>`
+const func2 = `<TwoByTwoGrid />`
+
+# Feature Sections
+
+<LiveCode
+    code={func1}
+    copy={require('!!raw-loader!./three-col/column.js').default}
+    scope={{ NavLink, PropTypes, FeatureWithThreeColumn}}
+    title="Feature with Three Columns"
+/>
+
+<LiveCode
+    code={func2}
+    copy={require('!!raw-loader!./two-by-two/two.js').default}
+    scope={{ NavLink, PropTypes, TwoByTwoGrid}}
+    title="Feature with 2x2 Grid"
+/>
