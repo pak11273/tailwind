@@ -2,8 +2,8 @@
   "name": "tailwind",
   "version": "0.1.0",
   "scripts": {
-    "build:styles": "postcss ./src/assets/css/tailwind.css -o ./src/assets/css/styles.css",
-    "build:watch": "postcss ./src/assets/css/tailwind.css -o ./src/assets/css/styles.css --watch",
+    "build:styles": "postcss ./assets/css/tailwind.css -o ./assets/css/styles.css",
+    "build:watch": "postcss ./assets/css/tailwind.css -o ./assets/css/styles.css --watch",
     "prebuild": "yarn build:styles",
     "prestart": "yarn build:styles",
     "//": "yarn build:styles",
