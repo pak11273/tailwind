@@ -4,6 +4,7 @@ import App from "./App"
 import AppBar from "./AppBar"
 import Footer from "./Footer"
 import Header from "./Header"
+import Layout from "./Layout"
 import LibzyRoot from "./LibzyRoot"
 import LiveCode from "./LiveCode"
 import MDX from "./MDX"
@@ -19,6 +20,7 @@ export {
   Masthead,
   PageContainer,
   Header,
+  Layout,
   LibzyRoot,
   LiveCode,
   MDX,
