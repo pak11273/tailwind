@@ -3,8 +3,19 @@
 import "assets/css/styles.css"
 import "assets/css/custom.css"
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default class App extends NextApp {
+  // remove  server generated css
+  componentDidMount() {
+    const jssStyles = document.querySelector("#jss-server-side")
+    if (jssStyles && jssStyles.parentNode)
+      jssStyles.parentNode.removeChild(jssStyles)
+  }
+
+  render() {
+    const { Component, pageProps } = this.props
+
+    return <Component {...pageProps} />
+  }
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -18,5 +29,3 @@ function MyApp({ Component, pageProps }) {
 //
 //   return { ...appProps }
 // }
-
-export default MyApp
