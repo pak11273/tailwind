@@ -1,0 +1,21 @@
+import { LiveCode } from '../../components'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {ImageRight} from './ImageRight' 
+// import srcImg from 'assets/images/bicycles.jpeg'
+const func = 
+`<ImageRight
+  title="Title goes here"
+  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident hic, sed reiciendis optio vel"
+  buttonOne
+  buttonTwo
+/>`
+
+# Masthead Sections
+
+<LiveCode
+    code={func}
+    copy={require('!!raw-loader!./ImageRight').default}
+    scope={{ NavLink, PropTypes, ImageRight}}
+    title="Masthead component with image on right"
+/>
