@@ -9,7 +9,15 @@
     "//": "yarn build:styles",
     "dev": "next",
     "build": "cross-env NODE_ENV=production next build",
-    "start": "cross-env NODE_ENV=development next start"
+    "start": "cross-env NODE_ENV=development next start",
+    "deploy": "now --public && now alias && now rm $npm_package_now_name --safe --yes"
+  },
+  "now": {
+    "name": "tailwind",
+    "alias": [
+      "tailwind.now.sh",
+      "production.tailwind.com"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -65,6 +73,7 @@
     "next-optimized-images": "^2.5.7",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "raw-loader": "^4.0.0",
     "re-resizable": "^6.3.2",
