@@ -1,3 +1,4 @@
+import { Masthead } from "./components"
 import { v4 as uuidv4 } from "uuid"
 
 const Marketing = require("./src/pages/docs/marketing.mdx").default
@@ -9,7 +10,7 @@ const Styleguide = require("./src/pages/docs/styleguide.mdx").default
 const Loader = require("./src/pages/docs/elements/loader/index.mdx").default
 const Hero = require("./src/pages/docs/page/hero/index.mdx").default
 const Feature = require("./src/pages/docs/page/feature/index.mdx").default
-const Masthead = require("./src/pages/docs/page/masthead/index.mdx").default
+// const Masthead = require("./src/pages/docs/page/masthead/index.mdx").default
 const Faq = require("./src/pages/docs/faq.mdx").default
 
 export default {
@@ -31,24 +32,24 @@ export default {
             button: {
               path: "/docs/get-started",
               id: uuidv4(),
-              text: "Get started"
-            }
+              text: "Get started",
+            },
           },
           {
             title: "Styleguide",
-            text: "Build a comprehensive style-guide for your project"
+            text: "Build a comprehensive style-guide for your project",
           },
           {
             title: "Live Changes",
-            text: "See what your components look like with dynamic props live!"
+            text: "See what your components look like with dynamic props live!",
           },
           {
             title: "React-router ready",
             text:
-              "Components that use links are tailored to work with React-Router"
-          }
-        ]
-      }
+              "Components that use links are tailored to work with React-Router",
+          },
+        ],
+      },
     },
     {
       path: "docs",
@@ -58,19 +59,19 @@ export default {
           text: "Get Started",
           path: "get-started",
           id: uuidv4(),
-          component: GetStarted
+          component: GetStarted,
         },
         {
           text: `StyleGuide`,
           path: "styleguide",
           id: uuidv4(),
-          component: Styleguide
+          component: Styleguide,
         },
         {
           text: "Marketing UI Components",
           path: "marketing",
           id: uuidv4(),
-          component: Marketing
+          component: Marketing,
         },
         {
           text: "Page Sections",
@@ -81,27 +82,27 @@ export default {
               text: "Masthead Sections",
               path: "masthead",
               id: uuidv4(),
-              component: Masthead
+              component: Masthead,
             },
             {
               text: "Hero Sections",
               path: "hero",
               id: uuidv4(),
-              component: Hero
+              component: Hero,
             },
             {
               text: "Feature Sections",
               path: "feature",
               id: uuidv4(),
-              component: Feature
-            }
-          ]
+              component: Feature,
+            },
+          ],
         },
         {
           text: "Application Components -",
           path: "application",
           id: uuidv4(),
-          component: Application
+          component: Application,
         },
         {
           text: "Elements",
@@ -112,30 +113,30 @@ export default {
               text: "Loaders",
               path: "loader",
               id: uuidv4(),
-              component: Loader
-            }
-          ]
+              component: Loader,
+            },
+          ],
         },
         {
           text: "FAQ",
           path: "faq",
           id: uuidv4(),
-          component: Faq
-        }
-      ]
-    }
+          component: Faq,
+        },
+      ],
+    },
   ],
   theme: {
     palette: {
       primary: {
-        main: "#61DBFB"
+        main: "#61DBFB",
       },
       secondary: {
-        main: "#222222"
-      }
-    }
+        main: "#222222",
+      },
+    },
   },
   options: {
-    routerType: "hash" // hash | browser
-  }
+    routerType: "hash", // hash | browser
+  },
 }

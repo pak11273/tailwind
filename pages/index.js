@@ -1,5 +1,5 @@
 import LibzyConfig from "../libzy.config"
-import LibzyRoot from "../src/libzy"
+import LibzyRoot from "./Libzy"
 import React from "react"
 
 const App = () => <LibzyRoot config={LibzyConfig} />
