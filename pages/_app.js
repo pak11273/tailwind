@@ -1,7 +1,9 @@
-// import App from 'next/app'
+//ref: https://medium.com/javascript-in-plain-english/ssr-with-next-js-styled-components-and-material-ui-b1e88ac11dfa
 
 import "assets/css/styles.css"
 import "assets/css/custom.css"
+
+import NextApp from "next/app"
 
 export default class App extends NextApp {
   // remove  server generated css
