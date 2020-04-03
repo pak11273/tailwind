@@ -1,0 +1,21 @@
+import { LiveCode } from '../../../../libzy'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {MastheadWithImageOnRight} from './image-right/image-right.js' 
+
+const func = 
+`<MastheadWithImageOnRight
+  title="Title goes here"
+  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident hic, sed reiciendis optio vel"
+  buttonOne
+  buttonTwo
+/>`
+
+# Masthead Sections
+
+<LiveCode
+    code={func}
+    copy={require('!!raw-loader!./image-right/image-right.js').default}
+    scope={{ NavLink, PropTypes, MastheadWithImageOnRight}}
+    title="Masthead component with image on right"
+/>
