@@ -6,26 +6,6 @@ const withMDX = require("@next/mdx")({
 })
 const path = require("path")
 
-// module.exports = withMDX(
-//   withPlugins([
-//     [
-//       optimizedImages,
-//       {
-//         /* config for next-optimized-images */
-//       }
-//     ]
-//     // webpack: config => {
-//     //   config.module.rules.push({
-//     //     test: /\.md$/,
-//     //     use: "raw-loader"
-//     //   })
-
-//     //   return config
-//     // },
-//     // pageExtensions: ["js", "jsx", "md", "mdx"]
-//   ])
-// )
-
 const prod = process.env.NODE_ENV === "production"
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const webpack = require("webpack")
