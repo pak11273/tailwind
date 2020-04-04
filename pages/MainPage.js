@@ -151,8 +151,6 @@ const styles = (theme) => ({
   },
 })
 
-const MainPage = withStyles(styles, { withTheme: true })(
+export default withStyles(styles, { withTheme: true })(
   withConfig(MainPageInner)
 )
-
-export default MainPage

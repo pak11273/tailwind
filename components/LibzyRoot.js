@@ -16,7 +16,6 @@ export default class LibzyRoot extends Component {
     // if (this.props.config.options.routerType === 'hash') {
     //     Router = HashRouter;
     // }
-    console.log(this.props.config)
 
     return (
       <ConfigContext.Provider value={this.props.config}>

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import { Route, Switch } from "react-router-dom"
 
 // import Layout from '../layout/layout'
 import Nav from "./Nav"
+import { Route } from "react-router-dom"
 import { withConfig } from "./ConfigContext"
 import { withStyles } from "@material-ui/core"
 

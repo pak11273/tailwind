@@ -1,17 +1,16 @@
+import MainPage from "pages/MainPage"
 import { Masthead } from "components"
 import { v4 as uuidv4 } from "uuid"
 
-const Marketing = require("pages/marketing.mdx").default
-const Application = require("pages/application.mdx").default
-
-const { MainPage } = require("pages/Libzy")
-const GetStarted = require("pages/get-started.mdx").default
-const Styleguide = require("pages/styleguide.mdx").default
+const Marketing = require("components/mdx/marketing.mdx").default
+const Application = require("components/mdx/application.mdx").default
+const GetStarted = require("components/mdx/get-started.mdx").default
+const Styleguide = require("components/mdx/styleguide.mdx").default
 const Loader = require("components/elements/loader/index.mdx").default
 const Hero = require("components/marketing/page/hero/index.mdx").default
 const Feature = require("components/marketing/page/feature/index.mdx").default
 // const Masthead = require("./src/pages/docs/page/masthead/index.mdx").default
-const Faq = require("pages/faq.mdx").default
+const Faq = require("components/mdx/faq.mdx").default
 
 export default {
   title: "TailwindReact",
