@@ -102,7 +102,7 @@ const styles = (theme) => ({
     // height: 'calc(100% - 40px)',
     overflow: "hidden",
     borderRadius: 5,
-    margin: "20px 0px 20px 0px",
+    marginTop: 20,
   },
   layout: {
     transition: "all ease 300ms",

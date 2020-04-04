@@ -1,22 +1,26 @@
 import { LiveCode } from 'components'
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {FeatureWithThreeColumn} from './three-col/column.js' 
+import {ThreeColumn} from './three-col/column.js' 
 import {TwoByTwoGrid} from './two-by-two/two.js' 
 const func1 = 
-`<FeatureWithThreeColumn 
-  subtitle="transactions" 
-  title="Find the best properties in your area" 
+`<ThreeColumn 
+  rider="rider" 
+  title="Title goes here" 
   description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
 />`
-const func2 = `<TwoByTwoGrid />`
+const func2 = `<TwoByTwoGrid
+  rider="rider" 
+  title="Title goes here" 
+  description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+ />`
 
 # Feature Sections
 
 <LiveCode
     code={func1}
     copy={require('!!raw-loader!./three-col/column.js').default}
-    scope={{ NavLink, PropTypes, FeatureWithThreeColumn}}
+    scope={{ NavLink, PropTypes, ThreeColumn}}
     title="Feature with Three Columns"
 />
 
