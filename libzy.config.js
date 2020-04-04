@@ -1,4 +1,4 @@
-import MainPage from "pages/MainPage"
+import MainPage from "components/MainPage"
 import { Masthead } from "components"
 import { v4 as uuidv4 } from "uuid"
 

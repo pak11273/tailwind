@@ -1,7 +1,7 @@
 const withPlugins = require("next-compose-plugins")
 const optimizedImages = require("next-optimized-images")
 const withMDX = require("@next/mdx")({
-  extension: /\.(md|mdx)$/
+  extension: /\.(md|mdx)$/,
 })
 const path = require("path")
 
@@ -45,12 +45,12 @@ const nextConfig = {
 
     config.module.rules.push({
       test: /\.(jpe?g|png|gif|svg)$/i,
-      use: "file-loader"
+      use: "file-loader",
     })
 
     config.plugins.push(
       new webpack.optimize.LimitChunkCountPlugin({
-        maxChunks: 1
+        maxChunks: 1,
       })
     )
 
@@ -60,7 +60,7 @@ const nextConfig = {
 
     config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}))
     return config
-  }
+  },
 }
 
 const optimizeImageConfig = {
@@ -73,23 +73,23 @@ const optimizeImageConfig = {
   optimizeImages: true,
   optimizeImagesInDev: true,
   mozjpeg: {
-    quality: 80
+    quality: 80,
   },
   optipng: {
-    optimizationLevel: 3
+    optimizationLevel: 3,
   },
   pngquant: false,
-  gifsicle: {
-    interlaced: true,
-    optimizationLevel: 3
-  },
+  // gifsicle: {
+  //   interlaced: true,
+  //   optimizationLevel: 3
+  // },
   svgo: {
     // enable/disable svgo plugins here
   },
   webp: {
     preset: "default",
-    quality: 75
-  }
+    quality: 75,
+  },
 }
 const crittersConfig = {
   // Outputs: <link rel="preload" onload="this.rel='stylesheet'">
@@ -97,13 +97,13 @@ const crittersConfig = {
   noscriptFallback: true,
   // Don't inline critical font-face rules, but preload the font URLs:
   fonts: true,
-  keyframes: "all"
+  keyframes: "all",
 }
 module.exports = withMDX(
   withPlugins(
     [
       [new critters(), crittersConfig],
-      [optimizedImages, optimizeImageConfig]
+      [optimizedImages, optimizeImageConfig],
     ],
     nextConfig
   )

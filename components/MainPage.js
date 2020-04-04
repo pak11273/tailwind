@@ -2,7 +2,7 @@ import { Button, Grid, Paper, Typography, withStyles } from "@material-ui/core"
 import React, { Component } from "react"
 
 import { Link } from "react-router-dom"
-import { withConfig } from "../components"
+import { withConfig } from "components"
 
 class MainPageInner extends Component {
   render() {
