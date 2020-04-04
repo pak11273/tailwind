@@ -61,7 +61,7 @@ const styles = (theme) => ({
     flex: "1 0 auto",
   },
   content: {
-    // marginBottom: 30,
+    paddingBottom: 60,
     display: "inline-flex",
     minWidth: "100%",
     flexDirection: "row",
