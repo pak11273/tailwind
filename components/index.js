@@ -8,7 +8,7 @@ import Layout from "./Layout"
 import LibzyRoot from "./LibzyRoot"
 import LiveCode from "./LiveCode"
 import MDX from "./MDX"
-import Masthead from "./masthead/index.mdx"
+import Masthead from "./marketing/page/masthead/index.mdx"
 import MyLayout from "./MyLayout"
 import PageContainer from "./PageContainer"
 

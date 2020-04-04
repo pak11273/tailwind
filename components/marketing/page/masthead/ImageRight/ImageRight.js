@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom"
 import PropTypes from "prop-types"
 import React from "react"
 
-// import logo from "assets/images/bicycle-shop-logo-design-vector/40626.jpg"
+import logo from "assets/images/bicycle-shop-logo-design-vector/40626.jpeg"
 
-// import srcImg from "assets/images/bicycles.jpg"
+import srcImg from "assets/images/bicycles.jpeg"
 
 const ButtonOne = ({ srcOne, LabelOne }) => (
   <div className="rounded-md shadow">
@@ -50,7 +50,7 @@ const Buttons = ({
   )
 }
 
-export const MastheadWithImageOnRight = ({
+export const ImageRight = ({
   srcOne,
   srcTwo,
   buttonOne,
@@ -63,16 +63,16 @@ export const MastheadWithImageOnRight = ({
   return (
     <section className="flex">
       <div className="flex flex-col max-w-4xl px-2 py-8 mx-auto lg:w-1/2 lg:max-w-full lg:px-12 lg:py-12">
-        {/* <img
+        <img
           className="self-center object-cover object-bottom w-full h-64"
           src={logo}
           alt="overseer"
-        /> */}
-        {/* <img
+        />
+        <img
           className="self-center object-cover w-full mt-6 rounded-lg shadow-xl lg:hidden h-72 object:center"
           src={srcImg}
           alt="house"
-        /> */}
+        />
         <h1 className="mt-6 text-2xl font-bold leading-tight text-gray-900">
           {title}
         </h1>
@@ -87,17 +87,17 @@ export const MastheadWithImageOnRight = ({
         />
       </div>
       <div className="hidden lg:block lg:w-1/2 lg:relative">
-        {/* <img
+        <img
           className="inset-0 object-cover w-full h-full"
           src={srcImg}
           alt="bikes"
-        /> */}
+        />
       </div>
     </section>
   )
 }
 
-MastheadWithImageOnRight.propTypes = {
+ImageRight.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   srcOne: PropTypes.string,
@@ -108,7 +108,7 @@ MastheadWithImageOnRight.propTypes = {
   buttonTwo: PropTypes.bool,
 }
 
-MastheadWithImageOnRight.defaultProps = {
+ImageRight.defaultProps = {
   title: "Masthead with image on the right",
   description: "Place description here",
   srcOne: "/",

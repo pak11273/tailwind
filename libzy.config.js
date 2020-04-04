@@ -9,7 +9,6 @@ const Styleguide = require("components/mdx/styleguide.mdx").default
 const Loader = require("components/elements/loader/index.mdx").default
 const Hero = require("components/marketing/page/hero/index.mdx").default
 const Feature = require("components/marketing/page/feature/index.mdx").default
-// const Masthead = require("./src/pages/docs/page/masthead/index.mdx").default
 const Faq = require("components/mdx/faq.mdx").default
 
 export default {
