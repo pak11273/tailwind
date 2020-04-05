@@ -49,7 +49,7 @@ class PageContainer extends Component {
         path={"/" + item.path}
         render={() => (
           <React.Fragment>
-            <div
+            <section
               className={this.props.classes.nav}
               style={{
                 width: this.props.isMenuOpen ? 240 : 0,
@@ -57,12 +57,12 @@ class PageContainer extends Component {
               }}
             >
               <Nav basePath={item.path} tree={item.tree} />
-            </div>
-            <div className={this.props.classes.page}>
+            </section>
+            <section className={this.props.classes.page}>
               {item.tree.map((treeItem, i) =>
                 this.getMenuTreeRoute(i, treeItem, "/" + item.path)
               )}
-            </div>
+            </section>
             {/* TODO: layout feature button */}
             {/* <div>
                             <button
@@ -126,6 +126,7 @@ const styles = (theme) => ({
     marginTop: 20,
   },
   page: {
+    paddingTop: "40px",
     flex: "1 0 auto",
     flexShrink: "inherit",
     height: "100%",

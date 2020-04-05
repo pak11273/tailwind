@@ -4,7 +4,7 @@ import {
   Paper,
   Tooltip,
   Typography,
-  withStyles
+  withStyles,
 } from "@material-ui/core"
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live"
 import React, { Component } from "react"
@@ -33,7 +33,7 @@ class LiveCodeInner extends Component {
       code: this.props.code,
       copy: this.props.copy,
       codeBlockOpen: this.props.codeBlockOpen,
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
     }
   }
 
@@ -198,7 +198,7 @@ class LiveCodeInner extends Component {
           SM: 640,
           MD: 768,
           LG: 1024,
-          XL: 1280
+          XL: 1280,
         }
 
         entries.forEach(function (entry) {
@@ -237,12 +237,12 @@ class LiveCodeInner extends Component {
 
   windowWidth = () => {
     this.setState({
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
     })
     const win = window.innerWidth
   }
 
-  renderDroppable = e => {
+  renderDroppable = (e) => {
     if (e.target.classList.contains("js-delete-btn")) {
       document
         .querySelector(".js-droppable")
@@ -250,7 +250,7 @@ class LiveCodeInner extends Component {
     }
   }
 
-  addDeleteBtn = e => {
+  addDeleteBtn = (e) => {
     if (e.target.classList.contains("js-delete-btn")) {
       document
         .querySelector(".js-droppable")
@@ -272,11 +272,11 @@ class LiveCodeInner extends Component {
                 <IconButton
                   style={{
                     transition: "all ease 300ms",
-                    transform: this.state.expanded ? "rotate(90deg)" : ""
+                    transform: this.state.expanded ? "rotate(90deg)" : "",
                   }}
                   onClick={() =>
-                    this.setState(prev => ({
-                      expanded: !prev.expanded
+                    this.setState((prev) => ({
+                      expanded: !prev.expanded,
                     }))
                   }
                 >
@@ -296,7 +296,7 @@ class LiveCodeInner extends Component {
                   right: "0",
                   marginRight: "20px",
                   display: this.state.expanded ? "none" : "inline-flex",
-                  display: "none"
+                  display: "none",
                 }}
                 onClick={() => null}
               >
@@ -314,8 +314,8 @@ class LiveCodeInner extends Component {
                 >
                   <IconButton
                     onClick={() =>
-                      this.setState(prev => ({
-                        codeBlockOpen: !prev.codeBlockOpen
+                      this.setState((prev) => ({
+                        codeBlockOpen: !prev.codeBlockOpen,
                       }))
                     }
                   >
@@ -349,7 +349,7 @@ class LiveCodeInner extends Component {
               })}
             <Collapse
               style={{
-                display: this.state.windowWidth >= 500 ? "block" : "none"
+                display: this.state.windowWidth >= 500 ? "block" : "none",
               }}
               in={this.state.codeBlockOpen}
               timeout="auto"
@@ -357,14 +357,14 @@ class LiveCodeInner extends Component {
               <div className={this.props.classes.codeBlock}>
                 <LiveEditor
                   className={this.props.classes.code}
-                  onChange={code => this.setState({ code })}
+                  onChange={(code) => this.setState({ code })}
                 />
                 <LiveError className={this.props.classes.errorBlock} />
               </div>
             </Collapse>
             <Resizable
               enable={{
-                right: true
+                right: true,
               }}
               bounds="parent"
               className={this.props.classes.preview}
@@ -383,32 +383,32 @@ class LiveCodeInner extends Component {
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     marginTop: 10,
     padding: 10,
-    display: "grid"
+    display: "grid",
   },
   topBar: {
     display: "flex",
     posistion: "relative",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   },
   topBarTitle: {
     color: "#65819D",
-    display: "inline-block"
+    display: "inline-block",
   },
   topBarActions: {},
   description: {
     color: "#65819D",
-    padding: 5
+    padding: 5,
   },
   codeBlock: {},
   code: {
     marginTop: 5,
     backgroundColor: "#2b3e50",
     borderRadius: 5,
-    caretColor: "white"
+    caretColor: "white",
   },
   errorBlock: {
     marginTop: 5,
@@ -416,19 +416,19 @@ const styles = theme => ({
     color: "#e53935",
     backgroundColor: "#ffcdd2",
     borderRadius: 5,
-    padding: 10
+    padding: 10,
   },
   preview: {
     marginTop: 5,
     backgroundColor: "#e8eaf5",
     borderRadius: 5,
     padding: 5,
-    display: "grid"
+    display: "grid",
   },
   livePreview: {
-    maxWidth: "100%"
+    maxWidth: "100%",
     // overflow: 'auto'
-  }
+  },
 })
 
 const LiveCode = withStyles(styles, { withTheme: true })(LiveCodeInner)
