@@ -78,7 +78,7 @@ const services = [
 
 export const ThreeColumn = ({ title, rider, description }) => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white sm:py-20 xl:py-40">
       <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
         <section className="lg:text-center">
           <p className="text-base font-semibold leading-6 tracking-wide uppercase text-primary-600">
@@ -92,7 +92,7 @@ export const ThreeColumn = ({ title, rider, description }) => {
           </p>
         </section>
         <section className="mt-10">
-          <ul className="grid md:grid-cols-2 md:col-gap-8 md:row-gap-10 lg:grid-cols-3">
+          <ul className="grid gap-4 md:grid-cols-2 md:col-gap-8 md:row-gap-10 lg:grid-cols-3">
             {services.map(({ icon, servicesTitle, servicesDescription }, i) => {
               return (
                 <li key={i}>
