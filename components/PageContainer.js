@@ -131,7 +131,6 @@ const styles = (theme) => ({
     flexShrink: "inherit",
     height: "100%",
     minHeight: 900,
-    maxWidth: 1440,
     padding: "0px 20px",
     "& @media screen and (max-width: 767px)": {
       padding: "0px 5px",

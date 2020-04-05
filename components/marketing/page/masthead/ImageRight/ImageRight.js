@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom"
 import PropTypes from "prop-types"
 import React from "react"
-
 import logo from "assets/images/bicycle-shop-logo-design-vector/40626.jpeg"
-
 import srcImg from "assets/images/bicycles.jpeg"
 
 const ButtonOne = ({ srcOne, LabelOne }) => (

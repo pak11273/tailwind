@@ -335,18 +335,11 @@ class LiveCodeInner extends Component {
             )}
           </div>
           <Collapse in={this.state.expanded} timeout="auto">
-            {this.props.description &&
-              this.props.description.split(",").map((v, index) => {
-                return (
-                  <Typography
-                    key={index}
-                    variant="subtitle2"
-                    className={this.props.classes.description}
-                  >
-                    {v}
-                  </Typography>
-                )
-              })}
+            <div className="flex">
+              <button className="p-2 bg-red-400">react</button>
+              <button className="p-2 bg-gray-300">html</button>
+              <button className="p-2 bg-gray-300">vue</button>
+            </div>
             <Collapse
               style={{
                 display: this.state.windowWidth >= 500 ? "block" : "none",
