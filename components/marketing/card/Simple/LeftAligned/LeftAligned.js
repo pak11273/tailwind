@@ -3,14 +3,17 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
-export const LeftAligned = () => (
-  <article className="w-full max-w-sm overflow-hidden bg-white rounded shadow">
+const defaultMainImg = "https://picsum.photos/245/245"
+const defaultProfileImg = "https://randomuser.me/api/portraits/women/17.jpg"
+
+export const LeftAligned = ({ mainImg, profileImg }) => (
+  <article className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded shadow">
     <div className="relative">
       <img
-        src="https://picsum.photos/245/245"
+        src={mainImg || defaultMainImg}
         alt="main image"
         // className="h-48 bg-center bg-no-repeat bg-cover"
-        className="object-cover w-full h-48 h-full"
+        className="object-cover w-full h-24 h-full"
       />
       {/* <div
         style="background-color: rgba(0,0,0,0.6)"
@@ -18,14 +21,14 @@ export const LeftAligned = () => (
       >
         $ 16.80
       </div> */}
-      {/* <div style="bottom: -20px;" className="absolute right-0 w-10 mr-2">
-        <a href="#">
+      <div className="absolute top-0 right-0 w-10 mr-2">
+        <a href="/#">
           <img
             className="border-2 border-white rounded-full"
-            src="https://randomuser.me/api/portraits/women/17.jpg"
+            src={profileImg || defaultProfileImg}
           />
         </a>
-      </div> */}
+      </div>
     </div>
     {/* <div className="p-3">
       <h3 className="mr-10 text-sm truncate-2nd">
