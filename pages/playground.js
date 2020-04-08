@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 
+import Layout from "../components/MyLayout.js"
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
 const defaultMainImg = "https://picsum.photos/245/245"
 const defaultProfileImg = "https://randomuser.me/api/portraits/women/17.jpg"
 
-export const LeftAligned = ({ mainImg, profileImg }) => (
+const LeftAligned = ({ mainImg, profileImg }) => (
   <article className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded shadow">
     <div className="relative">
       <img
@@ -58,3 +59,12 @@ export const LeftAligned = ({ mainImg, profileImg }) => (
     </div>
   </article>
 )
+
+export default function Playground() {
+  ;<p>This is a playground to create Tailwind Components</p>
+  return (
+    <Layout>
+      <LeftAligned />
+    </Layout>
+  )
+}
