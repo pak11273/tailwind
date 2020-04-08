@@ -1,0 +1,35 @@
+import { LiveCode } from 'components'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {ImageLeft} from './ImageLeft/ImageLeft.js' 
+import {LeftAligned} from './LeftAligned/LeftAligned.js' 
+const func1 = 
+`<ImageLeft
+  rider="rider" 
+  title="Title goes here" 
+  description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+  srcImg="https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+/>`
+const func2 = 
+`<LeftAligned
+  rider="rider" 
+  title="Title goes here" 
+  description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+  srcImg="https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+/>`
+
+# Simple Cards 
+
+<LiveCode
+    code={func1}
+    copy={require('!!raw-loader!./ImageLeft/ImageLeft.js').default}
+    scope={{ NavLink, PropTypes, ImageLeft}}
+    title="Image Left"
+/>
+
+<LiveCode
+    code={func2}
+    copy={require('!!raw-loader!./LeftAligned/LeftAligned.js').default}
+    scope={{ NavLink, PropTypes, LeftAligned}}
+    title="Left Aligned"
+/>

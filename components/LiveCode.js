@@ -335,11 +335,12 @@ class LiveCodeInner extends Component {
             )}
           </div>
           <Collapse in={this.state.expanded} timeout="auto">
-            <div className="flex">
+            {/* TODO: choose which framework */}
+            {/* <div className="flex">
               <button className="p-2 bg-red-400">react</button>
               <button className="p-2 bg-gray-300">html</button>
               <button className="p-2 bg-gray-300">vue</button>
-            </div>
+            </div> */}
             <Collapse
               style={{
                 display: this.state.windowWidth >= 500 ? "block" : "none",

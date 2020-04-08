@@ -29,6 +29,11 @@ const nextConfig = {
       use: "file-loader",
     })
 
+    config.module.rules.push({
+      test: /\.html?$/i,
+      use: "html-loader",
+    })
+
     config.plugins.push(
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 1,

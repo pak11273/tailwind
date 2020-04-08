@@ -1,4 +1,10 @@
-import { ConfigContext, withConfig } from "./ConfigContext"
+import {
+  ConfigContext,
+  Consumer,
+  Context,
+  ContextProvider,
+  withConfig,
+} from "./ConfigContext"
 
 import App from "./App"
 import AppBar from "./AppBar"
@@ -15,6 +21,9 @@ import PageContainer from "./PageContainer"
 export {
   App,
   AppBar,
+  Context,
+  Consumer,
+  ContextProvider,
   ConfigContext,
   Footer,
   Masthead,

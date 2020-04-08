@@ -1,0 +1,23 @@
+import { LiveCode } from 'components'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {FadedHover} from './FadedHover/FadedHover.js' 
+const func1 = 
+`<FadedHover
+  title="Title" 
+  slug="slug" 
+  images={[]}
+  hoverText="Features"
+  rider="rider"
+  rider2="rider2"
+  srcImg="https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+/>`
+
+# Cards 
+
+<LiveCode
+    code={func1}
+    copy={require('!!raw-loader!./FadedHover/FadedHover.js').default}
+    scope={{ NavLink, PropTypes, FadedHover}}
+    title="Faded Hover"
+/>

@@ -1,10 +1,13 @@
 import { LiveCode } from 'components'
-import PropTypes from 'prop-types'
-import {LoaderCircle} from './circle/circle.js' 
+import {LoaderCircle} from './circle/ReactCircle.js' 
 import {LoaderCog} from './cog/cog.js' 
 import {LoaderRedo} from './redo/redo.js' 
 import {LoaderSpinner} from './spinner/spinner.js' 
-const func1 = `<LoaderCircle />`
+const html = require('!!raw-loader!./circle/Circle.html').default
+const react = require('!!raw-loader!./circle/ReactCircle.js').default
+const vue = require('!!raw-loader!./circle/VueCircle.js').default
+const ReactCircleCode= {react,html,vue} 
+const ReactCircleComponent = `<LoaderCircle />`
 const func2 = 
 `<LoaderCog 
   color="primary-500"
@@ -26,8 +29,8 @@ const func4 = `
 <h1>Loaders</h1>
 
 <LiveCode
-    code={func1}
-    copy={require('!!raw-loader!./circle/circle.js').default}
+    code={ReactCircleComponent}
+    copy={ReactCircleCode["react"]}
     scope={{ LoaderCircle }}
     title="Circle Loader"
 />

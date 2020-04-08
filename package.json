@@ -58,6 +58,7 @@
     "critters-webpack-plugin": "^2.5.0",
     "dragula": "^3.7.2",
     "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
     "image-trace-loader": "^1.0.2",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",

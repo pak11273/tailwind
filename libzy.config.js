@@ -3,6 +3,10 @@ import { Masthead } from "components"
 import { v4 as uuidv4 } from "uuid"
 
 const Marketing = require("components/mdx/marketing.mdx").default
+const CardAnimated = require("components/marketing/card/Animated/index.mdx")
+  .default
+const CardLinked = require("components/marketing/card/Linked/index.mdx").default
+const CardSimple = require("components/marketing/card/Simple/index.mdx").default
 const Application = require("components/mdx/application.mdx").default
 const GetStarted = require("components/mdx/get-started.mdx").default
 const Styleguide = require("components/mdx/styleguide.mdx").default
@@ -93,6 +97,31 @@ export default {
               path: "feature",
               id: uuidv4(),
               component: Feature,
+            },
+          ],
+        },
+        {
+          text: "Cards",
+          id: uuidv4(),
+          path: "card",
+          tree: [
+            {
+              text: "Simple Cards",
+              path: "simplecards",
+              id: uuidv4(),
+              component: CardSimple,
+            },
+            {
+              text: "Cards with Links",
+              path: "linkedcards",
+              id: uuidv4(),
+              component: CardLinked,
+            },
+            {
+              text: "Animated Cards",
+              path: "animatedcards",
+              id: uuidv4(),
+              component: CardAnimated,
             },
           ],
         },
