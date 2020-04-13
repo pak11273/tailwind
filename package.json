@@ -2,10 +2,6 @@
   "name": "tailwind",
   "version": "0.1.0",
   "scripts": {
-    "build:styles": "postcss ./assets/css/tailwind.css -o ./assets/css/styles.css",
-    "build:watch": "postcss ./assets/css/tailwind.css -o ./assets/css/styles.css --watch",
-    "prebuild": "yarn build:watch",
-    "prestart": "yarn build:styles",
     "dev": "next",
     "build": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=development next start",
