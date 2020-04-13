@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 const defaultMainImg = "https://picsum.photos/245/245"
 const defaultProfileImg = "https://randomuser.me/api/portraits/women/17.jpg"
 
-export const LeftAligned = ({ mainImg, profileImg }) => (
+export const ImageTop = ({ mainImg, profileImg }) => (
   <article className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded shadow">
     <div className="relative">
       <img
