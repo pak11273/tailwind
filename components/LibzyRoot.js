@@ -6,9 +6,7 @@ import {
 } from "react-router-dom"
 import React, { Component } from "react"
 
-import { LibzyTheme } from "../theme/libzyTheme"
 import { MDXProvider } from "@mdx-js/react"
-import { MuiThemeProvider } from "@material-ui/core"
 
 export default class LibzyRoot extends Component {
   render() {
@@ -20,11 +18,9 @@ export default class LibzyRoot extends Component {
     return (
       <ConfigContext.Provider value={this.props.config}>
         <Router>
-          <MuiThemeProvider theme={LibzyTheme(this.props.config)}>
-            <MDXProvider components={MDX}>
-              <App />
-            </MDXProvider>
-          </MuiThemeProvider>
+          <MDXProvider components={MDX}>
+            <App />
+          </MDXProvider>
         </Router>
       </ConfigContext.Provider>
     )

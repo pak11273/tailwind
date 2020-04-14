@@ -53,6 +53,6 @@ FadedHover.propTypes = {
   hoverText: PropTypes.string,
   slug: PropTypes.string.isRequired,
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  rider: PropTypes.number.isRequired,
-  rider2: PropTypes.number.isRequired,
+  rider: PropTypes.string.isRequired,
+  rider2: PropTypes.string.isRequired,
 }

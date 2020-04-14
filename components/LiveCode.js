@@ -377,7 +377,7 @@ class LiveCodeInner extends Component {
   }
 }
 
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     marginTop: 10,
     padding: 10,
@@ -425,5 +425,5 @@ const styles = (theme) => ({
   },
 })
 
-const LiveCode = withStyles(styles, { withTheme: true })(LiveCodeInner)
+const LiveCode = withStyles(styles)(LiveCodeInner)
 export default LiveCode

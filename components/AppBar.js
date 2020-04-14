@@ -1,16 +1,16 @@
 import AppBar from "@material-ui/core/AppBar"
 import IconButton from "@material-ui/core/IconButton"
 import InputBase from "@material-ui/core/InputBase"
-import { withStyles } from "@material-ui/core/styles"
-import { fade } from "@material-ui/core/styles/colorManipulator"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import MenuIcon from "@material-ui/icons/Menu"
-import SearchIcon from "@material-ui/icons/Search"
-import React from "react"
 import { Link } from "react-router-dom"
+import MenuIcon from "@material-ui/icons/Menu"
+import React from "react"
+import SearchIcon from "@material-ui/icons/Search"
+import Toolbar from "@material-ui/core/Toolbar"
 import { Tooltip } from "@material-ui/core"
+import Typography from "@material-ui/core/Typography"
+import { fade } from "@material-ui/core/styles/colorManipulator"
 import { withConfig } from "./ConfigContext"
+import { withStyles } from "@material-ui/core/styles"
 
 class LibzyAppBar extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class LibzyAppBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar style={{ background: "#61DBFB" }} position="static">
           <Toolbar variant="dense">
             {this.props.showMenuButton && (
               <IconButton
@@ -72,6 +72,7 @@ class LibzyAppBar extends React.Component {
 
 const styles = (theme) => ({
   root: {
+    backgroundColor: "red",
     width: "100%",
   },
   grow: {
@@ -90,7 +91,7 @@ const styles = (theme) => ({
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: "#61DBFB",
     "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },

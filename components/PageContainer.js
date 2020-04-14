@@ -93,7 +93,7 @@ class PageContainer extends Component {
   }
 }
 
-const styles = (theme) => ({
+const styles = () => ({
   nav: {
     transition: "all ease 300ms",
     flexShrink: 0,
@@ -138,6 +138,4 @@ const styles = (theme) => ({
   },
 })
 
-export default withConfig(
-  withStyles(styles, { withTheme: true })(PageContainer)
-)
+export default withConfig(withStyles(styles)(PageContainer))

@@ -1,9 +1,7 @@
 import { ContextProvider } from "components"
 import LibzyConfig from "../libzy.config"
-import LibzyRoot from "./libzyroot"
+import { LibzyRoot } from "components"
 import React from "react"
-
-// import { LibzyRoot } from "components"
 
 const App = () => (
   <ContextProvider>

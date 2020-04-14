@@ -52,7 +52,7 @@ class App extends Component {
   }
 }
 
-const styles = (theme) => ({
+const styles = () => ({
   container: {
     display: "flex",
     flexDirection: "column",
@@ -75,6 +75,4 @@ const styles = (theme) => ({
   },
 })
 
-export default withStyles(styles, { withTheme: true })(
-  withRouter(withConfig(App))
-)
+export default withStyles(styles)(withRouter(withConfig(App)))

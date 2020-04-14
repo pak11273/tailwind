@@ -82,7 +82,7 @@ class MainPageInner extends Component {
   }
 }
 
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     width: "100%",
   },
@@ -92,7 +92,7 @@ const styles = (theme) => ({
     minHeight: 400,
     paddingTop: 20,
     paddingBottom: 20,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "#61DBFB",
   },
   topBarContent: {
     display: "table-cell",
@@ -151,6 +151,4 @@ const styles = (theme) => ({
   },
 })
 
-export default withStyles(styles, { withTheme: true })(
-  withConfig(MainPageInner)
-)
+export default withStyles(styles)(withConfig(MainPageInner))
