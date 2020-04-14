@@ -7,13 +7,6 @@
     "start": "cross-env NODE_ENV=development next start",
     "deploy": "now --public && now alias && now rm $npm_package_now_name --safe --yes"
   },
-  "now": {
-    "name": "tailwind",
-    "alias": [
-      "tailwind.now.sh",
-      "production.tailwind.com"
-    ]
-  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/node": "^7.8.7",
